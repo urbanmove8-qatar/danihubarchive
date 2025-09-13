@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Főoldal - Danihub</title>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/TB4Kxt8s/fixed.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <header class="p-4 md:p-6 bg-black">
+        <nav class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-orange-500">Danihub</h1>
+            <ul class="hidden md:flex space-x-6 text-xl">
+                <li><a href="index.html" class="hover:text-orange-500 transition-colors duration-300">Főoldal</a></li>
+                <li><a href="jatekok.html" class="hover:text-orange-500 transition-colors duration-300">Játékok</a></li>
+                <li><a href="rolunk.html" class="hover:text-orange-500 transition-colors duration-300">Rólunk</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-2xl text-white focus:outline-none">☰</button>
+        </nav>
+    </header>
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-black z-50 transform -translate-y-full transition-transform duration-300 ease-in-out md:hidden">
+        <div class="flex flex-col items-center justify-center h-full">
+            <button id="close-menu-button" class="absolute top-4 right-4 text-3xl text-white focus:outline-none">&times;</button>
+            <ul class="flex flex-col space-y-8 text-3xl font-bold text-center">
+                <li><a href="index.html" class="hover:text-orange-500 transition-colors duration-300">Főoldal</a></li>
+                <li><a href="jatekok.html" class="hover:text-orange-500 transition-colors duration-300">Játékok</a></li>
+                <li><a href="rolunk.html" class="hover:text-orange-500 transition-colors duration-300">Rólunk</a></li>
+            </ul>
+        </div>
+    </div>
+    <main class="container mx-auto px-4 py-16 text-center">
+        <section class="mb-16">
+            <h2 class="text-5xl md:text-7xl font-bold mb-4 animate-pulse">Üdv a Danihub közösségében!</h2>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                Ahol a játék, a nevetés és a barátság a legfontosabb!
+            </p>
+        </section>
+        <section class="mb-16">
+            <div class="bg-gray-900 rounded-xl p-8 shadow-lg max-w-4xl mx-auto">
+                <blockquote class="text-lg md:text-xl italic text-gray-200">
+                    "ha akartok egy jó közösséget, egy jó mc survival szervert, akkor zsa katt a linkre. meg lesznek ilyen baromságok, robuxos nyereménnyel... nem kamu nyugi"
+                </blockquote>
+                <p class="mt-4 text-orange-500 font-bold">- TT285 (aka !!!A Jobb Lábam)</p>
+            </div>
+        </section>
+        <section class="mb-16">
+            <h3 class="text-4xl font-bold mb-4 text-orange-500">A ami szerverünk</h3>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-6">
+                Gyere be a szeróba és érezd jól magad, less go!!
+            </p>
+            <a href="https://discord.gg/dEwVmaRn4h" target="blank_" class="inline-block bg-orange-500 text-black font-bold py-3 px-8 rounded-full text-lg hover:bg-orange-600 transition-colors duration-300 shadow-md">
+                Kattints ide a szerver linkért!
+            </a>
+        </section>
+    </main>
+    <footer class="bg-gray-900 p-8 text-center text-gray-400">
+        <p>&copy; 2025 Danihub. Minden jog fenntartva.</p>
+        <p class="text-xs text-gray-600 mt-12">Powered by <a href="https://urbanmove8.neocities.org" class="text-orange-400 hover:underline">Urbanmove 8</a></p>
+    </footer>
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-y-full');
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-y-full');
+        });
+    </script>
+</body>
+</html>

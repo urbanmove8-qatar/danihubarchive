@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Játékok - Danihub</title>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/TB4Kxt8s/fixed.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <header class="p-4 md:p-6 bg-black">
+        <nav class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-orange-500">Danihub</h1>
+            <ul class="hidden md:flex space-x-6 text-xl">
+                <li><a href="index.html" class="hover:text-orange-500 transition-colors duration-300">Főoldal</a></li>
+                <li><a href="jatekok.html" class="hover:text-orange-500 transition-colors duration-300">Játékok</a></li>
+                <li><a href="rolunk.html" class="hover:text-orange-500 transition-colors duration-300">Rólunk</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-2xl text-white focus:outline-none">☰</button>
+        </nav>
+    </header>
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-black z-50 transform -translate-y-full transition-transform duration-300 ease-in-out md:hidden">
+        <div class="flex flex-col items-center justify-center h-full">
+            <button id="close-menu-button" class="absolute top-4 right-4 text-3xl text-white focus:outline-none">&times;</button>
+            <ul class="flex flex-col space-y-8 text-3xl font-bold text-center">
+                <li><a href="index.html" class="hover:text-orange-500 transition-colors duration-300">Főoldal</a></li>
+                <li><a href="jatekok.html" class="hover:text-orange-500 transition-colors duration-300">Játékok</a></li>
+                <li><a href="rolunk.html" class="hover:text-orange-500 transition-colors duration-300">Rólunk</a></li>
+            </ul>
+        </div>
+    </div>
+    <main class="container mx-auto px-4 py-16 text-center">
+        <section class="mb-16">
+            <h3 class="text-4xl font-bold mb-8 text-orange-500">Danihub játékai</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/logos/Global-Header_MCCB-Logo_300x51.svg" alt="Minecraft logó" class="rounded-lg mb-4 mx-auto">
+                    <h4 class="text-2xl font-bold mb-2">Minecraft <span style="font-style: bold; color: green;">(Hivatalos főjátékaink 😎)</span></h4>
+                    <p class="text-gray-400">Survival, építkezés, kalandok egy szuper közösségben. :O</p>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Roblox_Logo_2022.svg/1280px-Roblox_Logo_2022.svg.png" alt="Roblox logó" class="rounded-lg mb-4 mx-auto">
+                    <h4 class="text-2xl font-bold mb-2">Roblox <span style="font-style: bold; color: green;">(Hivatalos főjátékaink 😎)</span></h4>
+                    <p class="text-gray-400">Robloxot nem csak gamenek toljuk, hanem full fejlesztői cucc. :) Itt építettük fel a Danihub stúdióját. Gyors, kényelmes és kreatív. 😎</p>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/200x120/1f2937/d1d5db?text=Egyéb+Játékok" alt="Egyéb játékok logó" class="rounded-lg mb-4 mx-auto">
+                    <h4 class="text-2xl font-bold mb-2">Más játékokkal <span style="font-style: bold; color: red;">(Nem hivatalos főjátékaink... 🙄)</span></h4>
+                    <p class="text-gray-400">Néha játszunk más játékokkal pl. skribbl.io, stb.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-900 p-8 text-center text-gray-400">
+        <p>&copy; 2025 Danihub. Minden jog fenntartva.</p>
+        <p class="text-xs text-gray-600 mt-12">Powered by <a href="https://urbanmove8.neocities.org" class="text-orange-400 hover:underline">Urbanmove 8</a></p>
+    </footer>
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-y-full');
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-y-full');
+        });
+    </script>
+</body>
+</html>
